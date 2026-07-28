@@ -2,33 +2,44 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>YS_CALI | Calisthenics Athlete</title>
+    <title>YS_CALI | Calisthenics Athlete</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 
 <body>
 
-
 <header>
 
-<nav>
+<nav class="navbar">
 
-<h1>YS_CALI</h1>
+<a href="index.html" class="brand">
 
-<div>
+<img src="images/logo.png" alt="YS_CALI Logo">
 
-<a href="#about">About</a>
+<span>YS_CALI</span>
+
+</a>
+
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
 <a href="#skills">Skills</a>
 <a href="academy.html">Academy</a>
+<a href="gallery.html">Gallery</a>
+<a href="faq.html">FAQ</a>
 <a href="#contact">Contact</a>
 
 </div>
+
 
 </nav>
 
@@ -38,13 +49,23 @@
 
 <section class="hero">
 
-<div>
 
-<h2>Strength. Discipline. Community.</h2>
+<div class="hero-overlay"></div>
+
+
+<div class="hero-content">
+
+
+<img class="hero-logo" src="images/logo.png" alt="YS_CALI">
+
+
+<h1>
+Strength. Discipline. Community.
+</h1>
+
 
 <p>
-Calisthenics athlete helping others build strength,
-confidence, and control through bodyweight training.
+Helping others build strength, confidence, and control through bodyweight training.
 </p>
 
 
@@ -55,25 +76,6 @@ Join YS Calisthenics Academy
 
 </div>
 
-</section>
-
-
-
-
-
-<section id="about">
-
-<h2>About Me</h2>
-
-
-<p>
-
-I'm Yahya, a calisthenics athlete dedicated to mastering
-bodyweight strength and helping others discover what their
-bodies are capable of.
-
-</p>
-
 
 </section>
 
@@ -81,103 +83,73 @@ bodies are capable of.
 
 
 
-
-<section id="skills">
-
-<h2>Skills</h2>
+<section class="section about-preview">
 
 
-<div class="cards">
-
-
-<div class="card">
-
-<h3>One Arm Push-Up</h3>
-
-<p>
-Advanced pushing strength and control.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>Weighted Calisthenics</h3>
-
-<p>
-Building strength through weighted pull-ups,
-dips, and progressive training.
-</p>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>Handstands</h3>
-
-<p>
-Balance, mobility, and body awareness.
-</p>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>Advanced Skills</h3>
-
-<p>
-Working toward elite calisthenics movements.
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<section>
-
-<h2>Programs</h2>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<h3>
-YS Calisthenics Academy
-</h3>
+<h2>About YS_CALI</h2>
 
 
 <p>
-
-Structured calisthenics training focused on
-strength, skills, and community.
-
+YS_CALI is built around the belief that calisthenics is more than just physical strength.
+It is about discipline, consistency, confidence, and helping others improve together.
 </p>
 
 
-<a href="academy.html">
+<a class="text-link" href="about.html">
 Learn More →
 </a>
 
 
+</section>
+
+
+
+
+
+
+
+<section class="section" id="skills">
+
+
+<h2>Featured Skills</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>Handstand</h3>
+
+<p>
+Developing balance, control, mobility, and body awareness.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Back Lever</h3>
+
+<p>
+Building advanced straight-arm strength and body control.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>Human Flag</h3>
+
+<p>
+A test of full-body strength, coordination, and discipline.
+</p>
+
 </div>
 
 
@@ -192,7 +164,69 @@ Learn More →
 
 
 
-<section id="contact">
+<section class="section gallery-preview">
+
+
+<h2>Training Journey</h2>
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-placeholder">
+
+Training Photos & Videos Coming Soon
+
+</div>
+
+
+</div>
+
+
+<a class="button secondary" href="gallery.html">
+View Gallery
+</a>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="section academy-preview">
+
+
+<h2>YS Calisthenics Academy</h2>
+
+
+<p>
+
+Community-focused calisthenics training designed to help
+students build strength, learn skills, and grow together.
+
+</p>
+
+
+<a class="button" href="academy.html">
+
+Explore Academy
+
+</a>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="section contact" id="contact">
 
 
 <h2>Connect</h2>
@@ -203,10 +237,10 @@ Follow my journey or reach out:
 </p>
 
 
-<div class="socials">
+<div class="social-links">
 
 
-<a href="https://instagram.com/ys_cali">
+<a href="https://instagram.com/ys_cali" target="_blank">
 Instagram
 </a>
 
@@ -224,11 +258,24 @@ Email
 
 
 
+
+
+
 <footer>
 
-© 2026 YS_CALI
+<img src="images/logo.png" alt="YS_CALI">
+
+
+<p>
+© 2026 YS_CALI. All rights reserved.
+</p>
+
 
 </footer>
+
+
+
+<script src="script.js"></script>
 
 
 </body>
