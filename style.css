@@ -530,3 +530,32 @@ footer img {
 
 
 }
+
+/* Prevent images from overflowing */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Control logo size in hero sections */
+.hero-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+/* Navbar logo */
+.brand img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+
+/* Footer logo */
+footer img {
+    width: 50px;
+    height: auto;
+}
