@@ -1,0 +1,258 @@
+/* ys_cali v2 — compact, modern, mobile-first */
+:root{
+  --bg:#edf5f5;
+  --bg-soft:#e3f0f1;
+  --surface:rgba(255,255,255,.72);
+  --surface-solid:#f8fbfb;
+  --ink:#17383b;
+  --muted:#5e7476;
+  --accent:#17846f;
+  --accent-2:#237f95;
+  --line:rgba(23,56,59,.12);
+  --shadow:0 14px 34px rgba(29,67,70,.10);
+  --shadow-strong:0 22px 50px rgba(29,67,70,.16);
+  --radius:22px;
+  --max:1120px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Sora",system-ui,sans-serif;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(255,255,255,.95), transparent 35%),
+    radial-gradient(circle at 90% 10%, rgba(82,164,172,.13), transparent 32%),
+    linear-gradient(145deg,#eef6f6 0%,#e2eeee 48%,#edf5f4 100%);
+  color:var(--ink);
+  line-height:1.6;
+  min-height:100vh;
+}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+
+.container{width:min(calc(100% - 40px),var(--max));margin-inline:auto}
+
+.site-header{
+  position:sticky;top:0;z-index:100;
+  backdrop-filter:blur(16px);
+  background:rgba(248,251,251,.78);
+  border-bottom:1px solid var(--line);
+}
+.navbar{
+  min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.brand{
+  display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;
+  letter-spacing:.01em;color:#125f68;
+}
+.brand img{width:42px;height:42px;object-fit:contain}
+
+.nav-links{display:flex;align-items:center;gap:7px}
+.nav-links a{
+  text-decoration:none;padding:10px 13px;border-radius:12px;font-size:.92rem;font-weight:600;
+  color:var(--ink);transition:.2s ease;
+}
+.nav-links a:hover,.nav-links a.active{background:rgba(35,127,149,.09);color:#126974}
+.nav-links .nav-cta{background:var(--accent);color:white;padding-inline:16px}
+.nav-links .nav-cta:hover{background:#116e5d;color:white}
+
+.menu-toggle{display:none;border:0;background:transparent;padding:8px;cursor:pointer}
+.menu-toggle span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;border-radius:10px}
+
+.hero{
+  min-height:72vh;
+  display:grid;align-items:end;
+  background:
+    linear-gradient(90deg,rgba(232,246,245,.96) 0%,rgba(232,246,245,.78) 42%,rgba(232,246,245,.18) 100%),
+    linear-gradient(0deg,rgba(18,55,59,.16),transparent 36%),
+    url("images/elbow%20lever%20park.jpg") center/cover no-repeat;
+  border-bottom:1px solid var(--line);
+}
+.hero-content{padding-block:clamp(70px,9vw,120px)}
+.hero-copy{max-width:690px}
+.eyebrow{
+  font-size:.72rem;letter-spacing:.18em;font-weight:800;color:#2a7781;margin-bottom:12px
+}
+.hero h1,.page-header h1{
+  font-size:clamp(2.6rem,6vw,5.2rem);line-height:1.03;letter-spacing:-.045em;
+  max-width:760px;margin-bottom:18px
+}
+.hero-text{font-size:clamp(1rem,1.8vw,1.2rem);max-width:600px;color:#34565a;margin-bottom:26px}
+.hero-actions,.contact-actions{display:flex;flex-wrap:wrap;gap:11px}
+
+.button{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:46px;padding:0 18px;border-radius:13px;text-decoration:none;font-weight:700;
+  font-size:.9rem;border:1px solid transparent;transition:.22s ease;cursor:pointer
+}
+.button.primary{background:var(--accent);color:white;box-shadow:0 10px 20px rgba(23,132,111,.18)}
+.button.primary:hover{transform:translateY(-2px);background:#126d5d;box-shadow:0 13px 25px rgba(23,132,111,.22)}
+.button.ghost{background:rgba(255,255,255,.58);border-color:var(--line);color:var(--ink)}
+.button.ghost:hover{transform:translateY(-2px);background:white}
+
+.section{padding-block:clamp(48px,6vw,72px)}
+.compact-intro{padding-bottom:46px}
+.section-heading{margin-bottom:28px}
+.section-heading h2{
+  font-size:clamp(1.8rem,3vw,2.65rem);line-height:1.1;letter-spacing:-.03em
+}
+.row-heading{display:flex;align-items:end;justify-content:space-between;gap:20px}
+.section-link{text-decoration:none;font-weight:700;font-size:.88rem;color:#247582;white-space:nowrap}
+.section-link:hover{text-decoration:underline}
+
+.story-panel,.academy-panel,.contact-panel,.safety-panel,.location-panel{
+  background:linear-gradient(145deg,rgba(255,255,255,.86),rgba(255,255,255,.55));
+  border:1px solid rgba(255,255,255,.8);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(12px);
+}
+.story-panel{padding:28px}
+.story-panel p{max-width:860px;color:#3d5b5e}
+.story-panel p+p{margin-top:13px}
+
+.skill-grid,.principle-grid,.session-grid,.level-grid{
+  display:grid;gap:14px
+}
+.skill-grid{grid-template-columns:repeat(3,1fr)}
+.skill-card,.principle-card,.session-card,.level-card{
+  position:relative;overflow:hidden;
+  background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(236,247,246,.72));
+  border:1px solid rgba(255,255,255,.9);
+  border-radius:20px;padding:24px;box-shadow:var(--shadow);
+  min-height:180px;transition:.23s ease
+}
+.skill-card:before,.principle-card:before,.session-card:before,.level-card:before{
+  content:"";position:absolute;inset:auto -25% -55% auto;width:180px;height:180px;border-radius:50%;
+  background:radial-gradient(circle,rgba(35,127,149,.10),transparent 68%);
+}
+.skill-card:hover,.principle-card:hover,.session-card:hover,.level-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-strong)}
+.skill-number,.principle-card span,.session-card span,.level-card span,.step-label{
+  font-size:.72rem;letter-spacing:.14em;font-weight:800;color:#2f8290
+}
+.skill-card h3,.principle-card h3,.session-card h3,.level-card h3{margin:12px 0 8px;font-size:1.15rem}
+.skill-card p,.principle-card p,.session-card p,.level-card p{color:var(--muted);font-size:.9rem}
+
+.progress-panel{
+  display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:16px;
+  padding:24px;border-radius:22px;background:#1d4f55;color:white;box-shadow:var(--shadow-strong)
+}
+.progress-step{display:flex;gap:13px;align-items:flex-start}
+.progress-step h3{font-size:1rem;margin-bottom:4px}
+.progress-step p{font-size:.78rem;color:rgba(255,255,255,.78)}
+.progress-arrow{font-size:1.35rem;color:#90c6c7}
+.step-label{color:#a7d9d7}
+
+.showcase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.showcase-card{
+  margin:0;border-radius:18px;overflow:hidden;background:#d8e9e9;aspect-ratio:4/3;
+  box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.9)
+}
+.showcase-card img{width:100%;height:100%;object-fit:cover}
+.showcase-note{margin-top:13px;color:var(--muted);font-size:.82rem}
+
+.academy-teaser{padding-top:28px}
+.academy-panel{padding:28px;display:flex;align-items:center;justify-content:space-between;gap:28px;background:
+  linear-gradient(120deg,rgba(255,255,255,.95),rgba(218,239,239,.78))
+}
+.academy-panel h2,.contact-panel h2,.safety-panel h2,.location-panel h2{font-size:clamp(1.7rem,3vw,2.6rem);line-height:1.08;letter-spacing:-.035em;margin-bottom:10px}
+.academy-panel p,.contact-panel p,.safety-panel p,.location-panel p{color:var(--muted);max-width:760px}
+
+.contact-section{padding-top:28px}
+.contact-panel{padding:28px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+
+.page-header{
+  border-bottom:1px solid var(--line);
+  background:linear-gradient(135deg,rgba(255,255,255,.58),rgba(202,230,231,.28));
+}
+.page-header-inner{
+  min-height:270px;padding-block:54px;display:flex;align-items:end;justify-content:space-between;gap:30px
+}
+.page-header h1{font-size:clamp(2.2rem,5vw,4rem);max-width:760px}
+.page-header p:not(.eyebrow){max-width:690px;color:var(--muted)}
+.academy-header .page-header-inner{align-items:center}
+
+.split-section{display:grid;grid-template-columns:.8fr 1.2fr;gap:34px;align-items:start}
+.principle-grid{grid-template-columns:repeat(3,1fr)}
+.principle-card{min-height:160px}
+.safety-section{padding-top:28px}
+.safety-panel{padding:28px;display:grid;grid-template-columns:.75fr 1.25fr;gap:30px}
+
+.academy-intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:34px}
+.session-grid{grid-template-columns:repeat(5,1fr)}
+.session-card{min-height:175px}
+.level-grid{grid-template-columns:repeat(3,1fr)}
+.level-card{min-height:190px}
+.level-card.featured{background:linear-gradient(150deg,#daf0ed,#f6fbfa);border-color:rgba(23,132,111,.18)}
+.level-card span{color:var(--accent)}
+
+.location-panel{padding:26px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+
+.faq-list{display:grid;gap:10px;max-width:900px;margin-inline:auto}
+.faq-item{
+  background:rgba(255,255,255,.76);border:1px solid var(--line);border-radius:16px;
+  box-shadow:0 8px 20px rgba(29,67,70,.06);overflow:hidden
+}
+.faq-item summary{
+  cursor:pointer;list-style:none;padding:19px 22px;font-weight:700;position:relative;padding-right:50px
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:after{
+  content:"+";position:absolute;right:20px;top:15px;font-size:1.4rem;font-weight:400;color:#39727a
+}
+.faq-item[open] summary:after{content:"−"}
+.faq-item p{padding:0 22px 20px;color:var(--muted);font-size:.92rem;max-width:820px}
+
+.site-footer{margin-top:22px;border-top:1px solid var(--line);background:rgba(248,251,251,.6)}
+.footer-inner{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.footer-inner p{font-size:.78rem;color:var(--muted)}
+.footer-brand{display:flex;align-items:center;gap:9px;text-decoration:none;font-weight:800;color:#125f68}
+.footer-brand img{width:32px;height:32px;object-fit:contain}
+
+@media (max-width:900px){
+  .skill-grid,.principle-grid,.level-grid{grid-template-columns:repeat(2,1fr)}
+  .session-grid{grid-template-columns:repeat(3,1fr)}
+  .progress-panel{grid-template-columns:1fr;gap:18px}
+  .progress-arrow{display:none}
+  .academy-panel,.contact-panel,.location-panel{align-items:flex-start;flex-direction:column}
+  .split-section,.academy-intro,.safety-panel{grid-template-columns:1fr}
+}
+
+@media (max-width:720px){
+  .container{width:min(calc(100% - 28px),var(--max))}
+  .navbar{min-height:66px}
+  .brand img{width:38px;height:38px}
+  .menu-toggle{display:block}
+  .nav-links{
+    display:none;position:absolute;left:14px;right:14px;top:62px;
+    padding:10px;background:rgba(248,251,251,.98);border:1px solid var(--line);
+    border-radius:16px;box-shadow:var(--shadow-strong);flex-direction:column;align-items:stretch
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:12px 13px}
+  .nav-links .nav-cta{text-align:center}
+  .hero{min-height:65vh;background:
+    linear-gradient(90deg,rgba(232,246,245,.93),rgba(232,246,245,.45)),
+    url("images/elbow%20lever%20park.jpg") center/cover no-repeat}
+  .hero-content{padding-block:64px}
+  .hero h1{font-size:clamp(2.35rem,13vw,3.6rem)}
+  .hero-actions .button{flex:1 1 100%}
+  .row-heading{align-items:flex-start;flex-direction:column}
+  .showcase-grid{grid-template-columns:repeat(3, minmax(0,1fr));gap:8px}
+  .showcase-card{border-radius:12px}
+  .section{padding-block:42px}
+  .story-panel,.academy-panel,.contact-panel,.safety-panel,.location-panel{padding:21px}
+  .page-header-inner{min-height:210px;padding-block:38px;align-items:flex-start;flex-direction:column}
+  .page-header h1{font-size:clamp(2rem,10vw,3.1rem)}
+  .academy-header .page-header-inner{align-items:flex-start}
+  .skill-grid,.principle-grid,.session-grid,.level-grid{grid-template-columns:1fr}
+  .skill-card,.principle-card,.session-card,.level-card{min-height:0}
+  .footer-inner{min-height:92px;flex-direction:column;justify-content:center}
+}
+
+@media (max-width:430px){
+  .showcase-grid{grid-template-columns:1fr 1fr}
+  .showcase-card:last-child{grid-column:1 / -1;aspect-ratio:16/9}
+  .contact-actions,.hero-actions{width:100%}
+  .contact-actions .button{flex:1 1 100%}
+}
